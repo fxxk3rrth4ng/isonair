@@ -8,7 +8,8 @@ export default {
 
     const init = {
       headers: {
-        'content-type': 'application/json;charset=UTF-8'
+        'content-type': 'application/json;charset=UTF-8',
+        'Access-Control-Allow-Origin': '*'
       }
     }
 
@@ -22,11 +23,7 @@ export default {
     ]
 
     for (let id of ids) {
-      let response = await fetch(`https://api.chzzk.naver.com/service/v2/channels/${id}/live-detail`, {
-        headers: {
-          "Access-Control-Allow-Origin": "*"
-        }
-      });
+      let response = await fetch(`https://api.chzzk.naver.com/service/v2/channels/${id}/live-detail`, init);
       let result = JSON.parse(await gatherResponse(response)).content;
       if (result.status == "OPEN") {results.push({
         "status": result.status,
@@ -40,10 +37,7 @@ export default {
           "liveCategory": result.liveCategoryValue,
           "frameRate": (result.adult) ? "19.0" : (JSON.parse(result.livePlaybackJson).media[0].encodingTrack[3].videoFrameRate),
           "startedAt": result.openDate,
-          "m3u8": {
-            "HLS": (result.adult) ? null : (JSON.parse(result.livePlaybackJson).media[0].path),
-            "LLHLS": (result.adult) ? null : (JSON.parse(result.livePlaybackJson).media[1].path)
-          }
+          "m3u8": (!result.adult) ? (JSON.parse(result.livePlaybackJson).media[1].path) : null
         }
       })} else {results.push({
         "status": result.status,
