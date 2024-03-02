@@ -19,7 +19,8 @@ export default {
       'c663e425e015731a5665a57fbac30bb6', // 라모 LAMO
       '6e06f5e1907f17eff543abd06cb62891', // 녹두로로
       '65a53076fe1a39636082dd6dba8b8a4b', // 오화요 Ohwayo
-      'b044e3a3b9259246bc92e863e7d3f3b8', // 시라유키 히나ㅋㅋ
+      'b044e3a3b9259246bc92e863e7d3f3b8', // 시라유키 히나
+      '4515b179f86b67b4981e16190817c580', // 네네코 마시로
     ]
 
     for (let id of ids) {
