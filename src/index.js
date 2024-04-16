@@ -33,7 +33,7 @@ export default {
           "channelId": id,
           "channelName": result.channel.channelName,
           "channelImage": result.channel.channelImageUrl,
-          "verifiedMark": result.channel.isVerified
+          "isVerified": result.channel.verifiedMark
         },
         "live": {
           "liveTitle": result.liveTitle,
@@ -48,7 +48,7 @@ export default {
           "channelId": id,
           "channelName": result.channel.channelName,
           "channelImage": result.channel.channelImageUrl,
-          "verifiedMark": result.channel.isVerified
+          "isVerified": result.channel.verifiedMark
         },
         "live": {
           "closedAt": result.closeDate
