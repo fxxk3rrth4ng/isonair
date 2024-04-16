@@ -32,7 +32,8 @@ export default {
         "channel": {
           "channelId": id,
           "channelName": result.channel.channelName,
-          "channelImage": result.channel.channelImageUrl
+          "channelImage": result.channel.channelImageUrl,
+          "verifiedMark": result.channel.isVerified
         },
         "live": {
           "liveTitle": result.liveTitle,
