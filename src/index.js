@@ -28,7 +28,7 @@ export default {
       let response = await fetch(`https://api.chzzk.naver.com/service/v2/channels/${id}/live-detail`, init);
       let result = JSON.parse(await gatherResponse(response)).content;
       if (result.status == "OPEN") {results.push({
-        "status": result.status,
+        "status": true,
         "channel": {
           "channelId": id,
           "channelName": result.channel.channelName,
@@ -43,7 +43,7 @@ export default {
           "m3u8": (!result.adult) ? (JSON.parse(result.livePlaybackJson).media[1].path) : null
         }
       })} else {results.push({
-        "status": result.status,
+        "status": false,
         "channel": {
           "channelId": id,
           "channelName": result.channel.channelName,
