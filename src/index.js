@@ -22,6 +22,7 @@ export default {
       'b8119eaadca58a5cd0c8cf2d48af8bea', // 일급천재
       '0889909c5e4a8234a1f963cf4a9e3081', // 칸나비
       '96fe5087cb0195df09ad54cac8a1e24a', // 서치
+      '61ca8b9ffd80dc8e529148734f9352da', // 무츠키쨩
     ]
 
     for (let id of ids) {
