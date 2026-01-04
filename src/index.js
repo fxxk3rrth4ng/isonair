@@ -24,7 +24,8 @@ export default {
       '96fe5087cb0195df09ad54cac8a1e24a', // 서치
       // '61ca8b9ffd80dc8e529148734f9352da', // 무츠키쨩
       // '798e100206987b59805cfb75f927e965', // 디디디용
-      '36ddb9bb4f17593b60f1b63cec86611d' // 사키하네 후야
+      '36ddb9bb4f17593b60f1b63cec86611d', // 사키하네 후야
+      'a96cea2d2c39cec636ba8170c66a0510' // RED레드
     ]
 
     for (let id of ids) {
